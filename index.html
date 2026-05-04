@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF -8">
+        <tittle>Arte e cultura</tittle>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <style>
+            .meu-video {
+                width: 100%; /* Ocupa a largura do container */
+                max-width: 800px; /* Largura máxima */
+                height: auto; /* Mantém a proporção */
+            }
+            form{
+                display:flex;
+                flex-direction:column;
+                gap:10px;
+                background:#fff;
+                padding:20px;
+                border-radius:15px}
+            input,textarea,select,button{
+                padding:10px;
+                border-radius:10px;
+                border:1px solid #ccc}
+            button{
+                background:#2563eb;
+                color:#fff;
+                border:none;
+                cursor:pointer}
+            .sucesso{
+                display:none;
+                background:#dcfce7;
+                padding:10px;
+                border-radius:10px;
+                margin-bottom:10px}
+                .modal{
+            display:none;
+            position:fixed;
+            inset:0;
+            background:rgba(0,0,0,.6);
+            justify-content:center;
+            align-items:center;
+            padding:20px
+            }
+            .modal-content{
+                background:#fff;
+                width:100%;
+                max-width:500px;
+                padding:20px;
+                border-radius:20px;
+                position:relative
+            }
+            .fechar{
+                position:absolute;
+                right:15px;
+                top:10px;
+                font-size:24px;
+                cursor:pointer;
+                font-weight:bold
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Dança</h1>
+            <p>Dança na arte culural</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#" id="abrirModal">Contato</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="sobre">
+                <h2>Sobre</h2>
+                <p>Dança é um tipo de arte, muitas vezes não tratada como uma. Sendo uma arte de grande influencia no mundo atual, é uma forma de cultura com diferentes características.
+                Dança é uma maneira de expessar sentimentos de quem a pratica, junto de seus valores. Diferentes culturas possuem diferentes tipois de dança, o que monstra quão diverso o mundo é. Porém devemos demonstrar o valor de todas as maneiras de produzir arte, nessse site, falarei especificamente da dança como diversidade.</p>
+                <nav>
+                    <ul>
+                        <li><img src= "imagem/download.jpg"   alt="dança" width="200" height="200"></li>
+                    </ul>
+                </nav>      
+        </section>
+             <section id="tipos">
+                <h2>Dança aérea</h2>
+                <p>Dança aérea é uma modalidade artística, contemporânea. Criada nos EUA, em torno de 1960. Nessa modalidade, o dançarino reproduz movimentos em aparelhos próprios da dança, como tecido, lira, trapézio. No decorrer da prática, quem a faz costuma desenvolver elasticidade junto de resistência. Na dança aérea, a liberdade é expressada frequentemente.</p>
+                <nav>
+                    <ul>
+                        <li><img src= "imagem/aérea.jpg"   alt="dança aérea" width="200" height="200"></li>
+                        <li><img src= "imagem/ar.jpg" alt="dança aérea" width="200" height="200"></li>
+                    </ul>
+                </nav>
+                <h2>Ballet</h2>
+                <p>Ballet é uma dança técnica refinada. Foi criada na Itália, mas se consolidou na França em 1581. Nessa modalidade, existem diferentes vertentes como clássico, romântico, contempôraneo. Essa dança emana uma sensação de delicadeza.</p>
+                <nav>
+                    <ul>
+                        <li><img src= "imagem/bale.jpg"   alt="ballet" width="200" height="200"></li>
+                        <li><img src= "imagem/sapato.jpg" alt="ballet" width="200" height="200"></li>
+                    </ul>
+                </nav>
+                <h2>Capoeira</h2>
+                <p>Capoeira é uma expressão cultural brasileira que mistura arte marcial, dança, além de mais aspectos culturais. Foi criada por escravizados africanos como forma de resistência em 1600. Essa modalidade faz movimentos ágeis, em roda, quando realizada costuma conter berimbau e musicalidade. Na capoeira, uma consciência é criada, junto de um ensino artístico.</p>
+                <nav>
+                    <ul>
+                        <li><img src= "imagem/capoeira.jpg"   alt="capoeira" width="200" height="200"></li>
+                        <li><img src= "imagem/dança.jpg"   alt="capoeira" width="200" height="200"></li>
+                    </ul>
+                </nav>
+                <h2>Tango</h2>
+                <p>Tango é uma dança de salão em duplas. Foi criada na Argentina, em 1870. Nessa modalidade, tem o detalhe da improvisação, é realizada como se fosse uma caminhada, onde são feitas moções complexas. Essa modalidade produz uma emoção intensa.</p>
+                <nav>
+                    <ul>
+                        <li><img src= "imagem/tango.jpg"   alt="tango" width="200" height="200"></li>
+                        <li><img src= "imagem/t.jpg"   alt="tango" width="200" height="200"></li>
+                    </ul>
+                </nav>
+                <h2>Buchaechum</h2>
+                <p>Buchaechum é uma dança com leques em um grupo. Foi criada na Coreia, em 1954. Essa dança é produzida por um grupo feminino vestindo hanbok, uma vestimenta tradicional nacional, os leques são usados como ferramentas que criam desenhos dinâmicos. Nessa modalidade, emana uma emoção harmônica.</p>
+                <nav>
+                    <ul>
+                        <li><img src= "imagem/ásia.jpg"   alt="buchaechum" width="200" height="200"></li>
+                        <li><img src= "imagem/dançar.jpg" alt="buchaechum" width="200" height="200"></li>
+                    </ul>
+                </nav>
+            </section>
+        </main>
+        <!-- MODAL -->
+<div class="modal" id="contato">
+    <div class="modal-content">
+        <span class="fechar" id="fecharModal">×</span>
+        <h2>Fale Comigo</h2>
+        <p class="sucesso" id="msg">Formulário enviado com sucesso!</p>
+        <form id="meuForm">
+            <label>Nome</label>
+            <input type="text" required>
+            <label>Email</label>
+            <input type="email" required>
+            <label>Idade</label>
+            <input type="number">
+            <label>Dança favorita</label>
+            <select>
+                <option>Dança aérea</option>
+                <option>Ballet</option>
+                <option>Capoeira</option>
+                <option>Tango</option>
+            </select>
+            <label>Sugestão</label>
+            <textarea rows="4"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+        <footer>
+            <p>Site criado na aula de Web 💻</p>
+        </footer>
+        <!-- JS -->
+<script>
+    const abrir = document.getElementById("abrirModal");
+    const modal = document.getElementById("contato");
+    const fechar = document.getElementById("fecharModal");
+    const form = document.getElementById("meuForm");
+    const msg = document.getElementById("msg");
+    abrir.addEventListener("click", function(e){
+        e.preventDefault();
+        modal.style.display = "flex";
+    });
+    fechar.addEventListener("click", function(){
+        modal.style.display = "none";
+    });
+    window.addEventListener("click", function(e){
+        if(e.target === modal){
+            modal.style.display = "none";
+        }
+    });
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        msg.style.display = "block";
+        form.reset();
+    });
+    </script>
+    </body>
+</html>
